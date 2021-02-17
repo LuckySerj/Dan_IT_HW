@@ -3,7 +3,7 @@ node_modules/
 # Ignore Logs
 logs
 *.log
-ds_store
+.ds_store
 thumbs.db
 # Ignore IDE specific files
 .idea/
