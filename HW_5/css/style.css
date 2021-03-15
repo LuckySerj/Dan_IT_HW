@@ -148,7 +148,7 @@
 }
 .tours-item:hover .tours-link-hover-block {
     display: block;
-    bottom: 75px;
+    top: 165px;
 }
 .foot-text {
   font-size: 12px;
