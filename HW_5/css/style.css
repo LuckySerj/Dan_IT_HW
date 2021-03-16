@@ -46,7 +46,7 @@
 .home-link:hover .rollover {
   width: 53px;
   height: 47px;
-  background-image: url(../img/logo\ 2.png);
+  background-image: url(../img/logo_2.png);
 }
 
 .contacts {
@@ -128,19 +128,15 @@
   line-height: 20px;
   color: #ffffff;
 }
-.hover-details {
-  text-decoration: none;
-  font-size: 14px;
-  line-height: 14px;
-  color: #ffffff;
-}
+
 .hover-details-text {
-    position: relative;
+    font-size: 14px;
+    line-height: 14px;
+    color: #ffffff;
 }
 .hover-details-text::after {
-    content: url(../img/Vector\ 1.svg);
-    position: absolute;
-    right: -16px;
+    content: url(../img/Vector_1.svg);
+    margin-left: 16px;
 }
 .tours-item:hover .tours-title {
     color: #F26522;
