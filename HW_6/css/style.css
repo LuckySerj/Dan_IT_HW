@@ -7,8 +7,239 @@
 }
 @font-face {
   font-family: "Ubuntu-Bold";
-  src: url(../fonts/Ubuntu-Regular.woff2);
+  src: url(../fonts/Ubuntu-Bold.woff2);
   font-weight: 700;
   font-display: swap;
   font-style: bold;
+}
+.wrapper {
+  background-image: url(../img/bgr.jpg);
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-rows: min-content minmax(min-content, 100vh);
+}
+.login-head {
+  display: flex;
+  padding: 18px 79px;
+  justify-content: space-between;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+.head-title {
+  font-family: Ubuntu-Bold;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 22px;
+  color: #ffffff;
+}
+.head-icons {
+  display: flex;
+}
+.head-icons > * {
+  margin-left: 25px;
+}
+.head-link {
+  text-decoration: none;
+  color: #ffffff;
+}
+.vertical-line {
+  width: 1px;
+  background-color: rgba(255, 255, 255, 0.9);
+  opacity: 0.5;
+}
+.head-login-text {
+  font-family: Ubuntu-Regular;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 14px;
+  color: #ffffff;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+.green-link:hover {
+  color: #01813f;
+  fill: #01813f;
+}
+
+.registration-section {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.registration-form {
+  background-color: #ffffff;
+  box-shadow: 0px 4px 18px rgba(0, 0, 0, 0.52);
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+}
+.green-box {
+  width: 18px;
+  height: 18px;
+  background-color: #3cb878;
+  position: absolute;
+  left: 0;
+  top: 29px;
+}
+.form-wrapper {
+  padding: 35px 60px;
+}
+.social-login-text {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.form-signup {
+  font-family: Ubuntu-Regular;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 20px;
+  color: #434343;
+}
+.form-login-link {
+  text-decoration: none;
+  font-family: Ubuntu-Regular;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 14px;
+  color: #3cb878;
+}
+.form-green-link:hover {
+  color: #01813f;
+  text-decoration: underline;
+}
+.social-buttons {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 4px;
+  margin-top: 15px;
+}
+.facebook-login {
+  display: flex;
+  background-color: #305db8;
+  border: none;
+  width: 160px;
+  /* justify-content: space-around; */
+  align-items: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 18px;
+  border-radius: 4px;
+}
+.facebook-login:hover {
+  background-color: #022263;
+}
+.facebook-login-line {
+  width: 1px;
+  height: 28px;
+  background-color: #0a162f;
+  opacity: 0.1;
+  margin-left: 18px;
+}
+.facebook-login-text {
+  font-family: Ubuntu-Regular;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 16px;
+  color: #ffffff;
+  margin-left: 18px;
+}
+.google-login {
+  display: flex;
+  border: none;
+  width: 160px;
+  align-items: center;
+  border-radius: 4px;
+  background-color: #df4a32;
+  padding-left: 12px;
+}
+.google-login:hover {
+  background-color: #ab1f09;
+}
+.google-login-line {
+  width: 1px;
+  height: 28px;
+  background-color: #2b0d09;
+  opacity: 0.1;
+  margin-left: 7px;
+}
+.google-login-text {
+  font-family: Ubuntu-Regular;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 16px;
+  color: #ffffff;
+  margin-left: 27px;
+}
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-top: 40px;
+  border-top: 1px solid #f2f2f2;
+}
+.form-group > * {
+  margin-top: 15px;
+}
+.form-legend {
+  font-family: Ubuntu-Regular;
+  margin: 0 auto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 14px;
+  color: #848484;
+}
+.input-data {
+  padding: 14px 20px;
+  border: 1px solid #f2f2f2;
+  border-radius: 4px;
+}
+.input-data:focus {
+  box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.21);
+  outline: none;
+  border: none;
+}
+
+.terms {
+  margin-left: 2px;
+  font-family: Ubuntu-Regular;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 14px;
+  color: #434343;
+}
+.terms-link {
+  text-decoration: none;
+  font-family: Ubuntu-Regular;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 14px;
+  color: #3cb878;
+}
+.form-button {
+  padding-top: 16px;
+  padding-bottom: 16px;
+  font-family: Ubuntu-Regular;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 16px;
+  color: #ffffff;
+  background-color: rgba(60, 184, 120, 0.8);
+  border-radius: 4px;
+  border: none;
+}
+.form-button:hover {
+  background-color: #01813f;
 }
