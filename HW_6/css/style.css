@@ -13,22 +13,25 @@
   font-style: bold;
 }
 .wrapper {
+  font-family: Ubuntu-Regular, sans-serif;
+  font-style: normal;
+  font-weight: normal;
   background-image: url(../img/bgr.jpg);
   background-size: cover;
   background-position: center;
   width: 100%;
-  height: 100%;
+  min-height: 100vh;
   display: grid;
-  grid-template-rows: min-content minmax(min-content, 100vh);
 }
 .login-head {
   display: flex;
   padding: 18px 79px;
   justify-content: space-between;
   background-color: rgba(0, 0, 0, 0.4);
+  height: min-content;
 }
 .head-title {
-  font-family: Ubuntu-Bold;
+  font-family: Ubuntu-Bold, sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: 22px;
@@ -36,8 +39,16 @@
   color: #ffffff;
   text-transform: uppercase;
 }
+.head-icons-wrapper {
+  display: flex;
+  margin-top: auto;
+  margin-bottom: auto;
+  justify-content: space-between;
+}
 .head-icons {
   display: flex;
+  margin-top: auto;
+  margin-bottom: auto;
 }
 .head-icons > * {
   margin-left: 25px;
@@ -45,21 +56,24 @@
 .head-link {
   text-decoration: none;
   color: #ffffff;
+  margin-top: auto;
+  margin-bottom: auto;
 }
+
 .vertical-line {
   width: 1px;
   background-color: rgba(255, 255, 255, 0.9);
   opacity: 0.5;
 }
+.head-text-wrapper {
+  display: flex;
+  align-items: center;
+}
 .head-login-text {
-  font-family: Ubuntu-Regular;
-  font-style: normal;
-  font-weight: normal;
   font-size: 14px;
   line-height: 14px;
   color: #ffffff;
-  margin-top: auto;
-  margin-bottom: auto;
+  margin-left: 25px;
 }
 .green-link:hover {
   color: #01813f;
@@ -69,15 +83,13 @@
 .registration-section {
   height: 100%;
   display: flex;
-  flex-direction: column;
-  justify-content: space-around;
+  justify-content: center;
 }
 .registration-form {
   background-color: #ffffff;
   box-shadow: 0px 4px 18px rgba(0, 0, 0, 0.52);
-  margin-left: auto;
-  margin-right: auto;
   position: relative;
+  height: max-content;
 }
 .green-box {
   width: 18px;
@@ -96,18 +108,12 @@
   align-items: center;
 }
 .form-signup {
-  font-family: Ubuntu-Regular;
-  font-style: normal;
-  font-weight: normal;
   font-size: 20px;
   line-height: 20px;
   color: #434343;
 }
 .form-login-link {
   text-decoration: none;
-  font-family: Ubuntu-Regular;
-  font-style: normal;
-  font-weight: normal;
   font-size: 14px;
   line-height: 14px;
   color: #3cb878;
@@ -132,6 +138,7 @@
   padding-bottom: 10px;
   padding-left: 18px;
   border-radius: 4px;
+  text-decoration: none;
 }
 .facebook-login:hover {
   background-color: #022263;
@@ -144,13 +151,11 @@
   margin-left: 18px;
 }
 .facebook-login-text {
-  font-family: Ubuntu-Regular;
-  font-style: normal;
-  font-weight: normal;
   font-size: 16px;
   line-height: 16px;
   color: #ffffff;
-  margin-left: 18px;
+  margin-left: auto;
+  margin-right: auto;
 }
 .google-login {
   display: flex;
@@ -159,7 +164,8 @@
   align-items: center;
   border-radius: 4px;
   background-color: #df4a32;
-  padding-left: 12px;
+  padding-left: 18px;
+  text-decoration: none;
 }
 .google-login:hover {
   background-color: #ab1f09;
@@ -172,28 +178,25 @@
   margin-left: 7px;
 }
 .google-login-text {
-  font-family: Ubuntu-Regular;
-  font-style: normal;
-  font-weight: normal;
   font-size: 16px;
   line-height: 16px;
   color: #ffffff;
-  margin-left: 27px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.input-form {
+  margin-top: 40px;
 }
 .form-group {
   display: flex;
   flex-direction: column;
-  margin-top: 40px;
   border-top: 1px solid #f2f2f2;
 }
 .form-group > * {
   margin-top: 15px;
 }
 .form-legend {
-  font-family: Ubuntu-Regular;
   margin: 0 auto;
-  font-style: normal;
-  font-weight: normal;
   font-size: 14px;
   line-height: 14px;
   color: #848484;
@@ -206,23 +209,17 @@
 .input-data:focus {
   box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.21);
   outline: none;
-  border: none;
+  border: 1px solid #fff;
 }
 
 .terms {
   margin-left: 2px;
-  font-family: Ubuntu-Regular;
-  font-style: normal;
-  font-weight: normal;
   font-size: 14px;
   line-height: 14px;
   color: #434343;
 }
 .terms-link {
   text-decoration: none;
-  font-family: Ubuntu-Regular;
-  font-style: normal;
-  font-weight: normal;
   font-size: 14px;
   line-height: 14px;
   color: #3cb878;
@@ -230,9 +227,6 @@
 .form-button {
   padding-top: 16px;
   padding-bottom: 16px;
-  font-family: Ubuntu-Regular;
-  font-style: normal;
-  font-weight: normal;
   font-size: 16px;
   line-height: 16px;
   color: #ffffff;
