@@ -208,33 +208,33 @@
 }
 .section-header {
   font-family: Montserrat-Regular, sans-serif;
-  font-weight: normal;
   padding-top: 83px;
   padding-bottom: 100px;
+  position: relative;
 }
 .section-header-title {
   font-size: 36px;
   line-height: 40px;
+  font-weight: 400;
   text-align: center;
   color: #4e4e4e;
-  position: relative;
 }
-.section-header-title::before {
+.section-header::before {
   content: "";
   height: 1px;
   width: 80px;
   background-color: #18cfab;
-  top: 64px;
+  top: 147px;
   left: 49%;
   transform: translateX(-50%);
   position: absolute;
 }
-.section-header-title::after {
+.section-header::after {
   content: "";
   height: 1px;
   width: 80px;
   background-color: #18cfab;
-  top: 68px;
+  top: 151px;
   left: 51%;
   transform: translateX(-50%);
   position: absolute;
@@ -445,4 +445,78 @@
   line-height: 25px;
   color: #ffffff;
   text-align: center;
+}
+.news-item:hover .news-title {
+  color: #18cfab;
+}
+.news-item:hover .news-date-block {
+  background-color: #18cfab;
+}
+.review {
+  background-image: url(../img/reviews_bg.jpg);
+  background-size: cover;
+  background-position: center;
+  /* padding-top: 98px; */
+  padding-bottom: 105px;
+}
+.review-title {
+  font-size: 36px;
+  line-height: 40px;
+  text-align: center;
+  color: #ffffff;
+  font-weight: 400;
+}
+.review-text {
+  font-family: Montserrat-Light, sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 30px;
+  color: #bbbbbb;
+  text-align: center;
+  position: relative;
+  padding-top: 70px;
+}
+.review-text::before {
+  content: url(../img/reviews_quotes.svg);
+  position: absolute;
+  width: 47px;
+  height: 33px;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.review-signature {
+  text-align: center;
+  margin-top: 37px;
+}
+.review-signature-name {
+  font-family: Montserrat-Bold, sans-serif;
+  font-size: 16px;
+  line-height: 27px;
+  text-transform: uppercase;
+  color: #18cfab;
+}
+.review-signature-profession {
+  font-family: Montserrat-Light, sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 27px;
+  color: #bbbbbb;
+  vertical-align: middle;
+}
+.ham-footer {
+  padding-top: 48px;
+  padding-bottom: 48px;
+  background-color: #22353f;
+}
+.footer-copyright {
+  font-family: Montserrat-Light, sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 26px;
+  text-align: center;
+  color: #aeaeae;
+}
+.copyright-span {
+  color: #18cfab;
 }
