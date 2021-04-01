@@ -1,17 +1,17 @@
 "use strict";
-const userName = prompt("Enter your Name:");
-let userAge = prompt("How old are you?");
+let userName = prompt("Enter your Name:");
+let userAge = +prompt("How old are you?");
 
 if (
-  !isNaN(+userAge) &&
-  userAge !== "" &&
+  !isNaN(userAge) &&
   userAge !== null &&
-  userName !== "" &&
+  userAge > 0 &&
+  userName.trim() !== "" &&
   userName !== null
 ) {
-  if (+userAge < 18) {
+  if (userAge < 18) {
     alert("You are not allowed to visit this website");
-  } else if (18 <= +userAge && +userAge <= 22) {
+  } else if (userAge <= 22) {
     if (confirm("Are you sure you want to continue?")) {
       alert(`Welcome, ${userName}`);
     } else {

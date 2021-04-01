@@ -1,3 +1,4 @@
+/* COMMON STYLES*/
 @font-face {
   font-family: "Montserrat-Light";
   src: url(../fonts/Montserrat-Light.woff2);
@@ -19,6 +20,7 @@
 .wrapper {
   min-width: 1200px;
 }
+/* HEADER STYLES */
 .ham-head {
   background-image: url(../img/section_header.jpg);
   background-size: cover;
@@ -64,6 +66,7 @@
 }
 .accent-color {
   font-family: Montserrat-Bold, sans-serif;
+  font-weight: bold;
   font-size: inherit;
   line-height: inherit;
   color: #18cfab;
@@ -78,6 +81,7 @@
 .head-nav-link {
   text-decoration: none;
   font-family: Montserrat-Bold, sans-serif;
+  font-weight: bold;
   font-size: 16px;
   line-height: 25px;
   text-transform: uppercase;
@@ -208,6 +212,7 @@
 }
 .section-header {
   font-family: Montserrat-Regular, sans-serif;
+  font-weight: normal;
   padding-top: 83px;
   padding-bottom: 100px;
   position: relative;
@@ -334,6 +339,7 @@
   color: #717171;
   padding: 14px 15px;
 }
+
 .amazing-gallery-item {
   position: relative;
 }
@@ -357,6 +363,7 @@
 }
 .amazing-hover-title {
   font-family: Montserrat-Bold, sans-serif;
+  font-weight: bold;
   font-size: 15px;
   line-height: 25px;
   text-transform: uppercase;
@@ -388,6 +395,7 @@
 }
 .load-more-title {
   font-family: Montserrat-Bold, sans-serif;
+  font-weight: bold;
   font-size: 14px;
   line-height: 42px;
   text-transform: uppercase;
@@ -416,6 +424,7 @@
 }
 .news-title {
   font-family: Montserrat-Bold, sans-serif;
+  font-weight: bold;
   font-size: 18px;
   line-height: 39px;
   color: #717171;
@@ -441,6 +450,7 @@
 .news-date-day,
 .news-date-mounth {
   font-family: Montserrat-Regular, sans-serif;
+  font-weight: normal;
   font-size: 16px;
   line-height: 25px;
   color: #ffffff;
@@ -456,7 +466,6 @@
   background-image: url(../img/reviews_bg.jpg);
   background-size: cover;
   background-position: center;
-  /* padding-top: 98px; */
   padding-bottom: 105px;
 }
 .review-title {
