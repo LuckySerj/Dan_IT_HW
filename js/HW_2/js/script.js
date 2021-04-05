@@ -7,7 +7,7 @@ if (
   userNum.trim() !== "" &&
   +userNum >= 0
 ) {
-  for (let i = 0; i <= +userNum; i++) {
+  for (let i = 0; i <= +userNum; i += 5) {
     if (i % 5 === 0) {
       console.log(i);
     }
