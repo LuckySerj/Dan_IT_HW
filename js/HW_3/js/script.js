@@ -1,35 +1,47 @@
 "use strict";
 
-const calculate = function (firstNumber, secondNumber, operation) {
-  do {
-    firstNumber = prompt("Enter the first number:", firstNumber);
-    secondNumber = prompt("Enter the second number:", secondNumber);
-  } while (
-    !firstNumber ||
-    typeof +firstNumber !== "number" ||
-    isNaN(+firstNumber) ||
-    firstNumber.trim() === "" ||
-    !secondNumber ||
-    typeof +secondNumber !== "number" ||
-    isNaN(+secondNumber) ||
-    secondNumber.trim() === ""
-  );
+let firstNumber;
+let secondNumber;
+let operation;
+let result;
 
-  do {
-    operation = prompt("Enter the operation (+, -, *, /):", operation);
-  } while (!operation || operation.trim() === "");
+do {
+  firstNumber = prompt("Enter the first number:", firstNumber);
+  secondNumber = prompt("Enter the second number:", secondNumber);
+} while (
+  !firstNumber ||
+  typeof +firstNumber !== "number" ||
+  isNaN(+firstNumber) ||
+  firstNumber.trim() === "" ||
+  !secondNumber ||
+  typeof +secondNumber !== "number" ||
+  isNaN(+secondNumber) ||
+  secondNumber.trim() === ""
+);
 
-  if (operation === "+") {
-    console.log(+firstNumber + +secondNumber);
-  } else if (operation === "-") {
-    console.log(firstNumber - secondNumber);
-  } else if (operation === "*") {
-    console.log(firstNumber * secondNumber);
-  } else if (operation === "/") {
-    console.log(firstNumber / secondNumber);
-  } else {
-    console.log("You entered wrong operation");
+do {
+  operation = prompt("Enter the operation (+, -, *, /):", operation);
+} while (!operation || operation.trim() === "");
+
+const calculate = function (firstNumber, secondNumber, operation, result) {
+  switch (operation) {
+    case "+":
+      result = +firstNumber + +secondNumber;
+      break;
+    case "-":
+      result = +firstNumber - +secondNumber;
+      break;
+    case "*":
+      result = +firstNumber * +secondNumber;
+      break;
+    case "/":
+      result = +firstNumber / +secondNumber;
+      break;
+    default:
+      result = "You entered wrong operation";
+      break;
   }
+  return result;
 };
 
-calculate();
+console.log(calculate(firstNumber, secondNumber, operation, result));
