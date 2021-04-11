@@ -3,7 +3,6 @@
 let firstNumber;
 let secondNumber;
 let operation;
-let result;
 
 do {
   firstNumber = prompt("Enter the first number:", firstNumber);
@@ -23,25 +22,23 @@ do {
   operation = prompt("Enter the operation (+, -, *, /):", operation);
 } while (!operation || operation.trim() === "");
 
-const calculate = function (firstNumber, secondNumber, operation, result) {
-  switch (operation) {
+const calculate = function (num1, num2, math) {
+  switch (math) {
     case "+":
-      result = +firstNumber + +secondNumber;
-      break;
+      return +num1 + +num2;
+
     case "-":
-      result = +firstNumber - +secondNumber;
-      break;
+      return +num1 - +num2;
+
     case "*":
-      result = +firstNumber * +secondNumber;
-      break;
+      return +num1 * +num2;
+
     case "/":
-      result = +firstNumber / +secondNumber;
-      break;
+      return +num1 / +num2;
+
     default:
-      result = "You entered wrong operation";
-      break;
+      return "You entered wrong operation";
   }
-  return result;
 };
 
-console.log(calculate(firstNumber, secondNumber, operation, result));
+console.log(calculate(firstNumber, secondNumber, operation));
