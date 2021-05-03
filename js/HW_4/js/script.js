@@ -1,18 +1,14 @@
 `use strict`;
 
-const name = prompt("Введите имя");
-const surname = prompt("Введите фамилию");
-function createNewUser(firstName, lastName) {
-  const newUser = {
-    firstName,
-    lastName,
-    getLogin() {
-      return (this.firstName[0] + this.lastName).toLowerCase();
-    },
-  };
-  newUser.login = newUser.getLogin();
+function createNewUser() {
+  this.firstName = prompt("Введите имя");
+  this.lastName = prompt("Введите фамилию");
 
-  return newUser;
+  this.getLogin = function () {
+    let login = (this.firstName[0] + this.lastName).toLowerCase();
+    return login;
+  };
 }
 
-console.log(createNewUser(name, surname));
+let newUser = new createNewUser();
+console.log(newUser.getLogin());
