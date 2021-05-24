@@ -46,5 +46,6 @@ input.onblur = function () {
     input.style.border = `2px solid red`;
     input.style.color = `black`;
     input.after(wrongInput);
+    span.remove();
   }
 };
