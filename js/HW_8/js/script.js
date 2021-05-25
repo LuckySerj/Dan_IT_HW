@@ -40,9 +40,8 @@ input.onblur = function () {
     button.onclick = function () {
       button.parentElement.remove();
       input.value = ``;
-      return;
     };
-  } else if (price < 0) {
+  } else {
     input.style.border = `2px solid red`;
     input.style.color = `black`;
     input.after(wrongInput);
