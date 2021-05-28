@@ -1,17 +1,14 @@
 `use strict`;
 
 const tab = function () {
-  const tabNav = document.querySelectorAll(`.tabs-title`);
   const tabContent = document.querySelectorAll(`.tab-content`);
+  const tabs = document.querySelector(`.tabs`);
 
-  tabNav.forEach((item) => {
-    item.addEventListener(`click`, selectTabNav);
-  });
-
-  function selectTabNav() {
-    tabNav.forEach((item) => item.classList.remove(`active`));
-    this.classList.add(`active`);
-    let tabName = this.getAttribute(`data-tab-name`);
+  tabs.addEventListener(`click`, selectTabNav);
+  function selectTabNav(e) {
+    document.querySelector(`.active`).classList.remove(`active`);
+    e.target.classList.add(`active`);
+    let tabName = e.target.getAttribute(`data-tab-name`);
     selectTabContent(tabName);
   }
 
