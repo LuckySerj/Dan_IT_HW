@@ -6,10 +6,12 @@ const tab = function () {
 
   tabs.addEventListener(`click`, selectTabNav);
   function selectTabNav(e) {
-    document.querySelector(`.active`).classList.remove(`active`);
-    e.target.classList.add(`active`);
-    let tabName = e.target.getAttribute(`data-tab-name`);
-    selectTabContent(tabName);
+    if (e.target) {
+      document.querySelector(`.active`).classList.remove(`active`);
+      e.target.classList.add(`active`);
+      let tabName = e.target.getAttribute(`data-tab-name`);
+      selectTabContent(tabName);
+    }
   }
 
   function selectTabContent(tabName) {

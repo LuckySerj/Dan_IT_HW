@@ -1,43 +1,29 @@
 `use strict`;
 
 const input = document.querySelectorAll(`.input`);
-const show = document.querySelectorAll(`.fa-eye`);
-const hide = document.querySelectorAll(`.fa-eye-slash`);
+const showHide = document.querySelectorAll(`.fas`);
 const button = document.getElementById(`btn`);
 const err = document.createElement(`p`);
 err.style.color = `red`;
 err.innerHTML = `<br>Нужно ввести одинаковые значения`;
-console.log(input[1]);
 
-show.forEach((el) => {
+showHide.forEach((el) => {
   el.addEventListener(`click`, showPass);
 });
-hide.forEach((el) => {
-  el.addEventListener(`click`, hidePass);
-});
+
 button.addEventListener(`click`, check);
 input.forEach((el) => {
   el.addEventListener(`focus`, (errRemove) => err.remove());
 });
 
 function showPass(e) {
-  if (e.target.previousElementSibling.getAttribute(`type`, `password`)) {
-    e.target.nextElementSibling.style.display = `block`;
+  if (e.target.previousElementSibling.getAttribute(`type`) === `password`) {
+    e.target.classList.replace("fa-eye", "fa-eye-slash");
     e.target.previousElementSibling.setAttribute(`type`, `text`);
   } else {
-    hidePass();
+    e.target.classList.replace("fa-eye-slash", "fa-eye");
+    e.target.previousElementSibling.setAttribute(`type`, `password`);
   }
-
-  console.log(e.target);
-}
-
-function hidePass(e) {
-  e.target.style.display = `none`;
-  e.target.previousElementSibling.previousElementSibling.setAttribute(
-    `type`,
-    `password`
-  );
-  console.log(e.target);
 }
 
 function check(e) {
