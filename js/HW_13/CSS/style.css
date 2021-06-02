@@ -1,0 +1,145 @@
+.container {
+  width: 1280px;
+  margin: 0 auto;
+  position: relative;
+}
+.title-link {
+  display: block;
+  font-size: 80px;
+  line-height: 94px;
+  text-align: left;
+  text-decoration: none;
+  margin-top: 61px;
+  margin-bottom: 38px;
+  color: #000000;
+}
+.accent-color {
+  color: #4bcaff;
+}
+
+.header-nav-menu {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #35444f;
+}
+
+.header-nav-menu-link {
+  display: block;
+  color: #ffffff;
+  border-left: 1px solid #ffffff;
+  font-size: 24px;
+  line-height: 28px;
+  text-decoration: none;
+  padding: 26px 40px;
+}
+
+.main-section {
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-between;
+}
+.sidebar {
+  width: 344px;
+  height: 399px;
+}
+.sidebar-nav-list {
+  padding-left: 0;
+  margin: 0;
+  list-style: none;
+  display: block;
+  border: 1px solid #000000;
+}
+.sidebar-nav-item {
+  display: flex;
+}
+.sidebar-nav-link {
+  text-decoration: none;
+  font-size: 27px;
+  line-height: 27px;
+  align-items: center;
+  color: #485863;
+  margin-top: 26px;
+  margin-bottom: 26px;
+  margin-left: 44px;
+}
+.inside-section {
+  width: 885px;
+}
+.picture-block {
+  height: 529px;
+  border: 1px solid #000000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.picture-block img {
+  transition: all 1s ease-out;
+}
+
+.picture-block img:hover {
+  transform: scale(1.1);
+}
+.inside-section-text {
+  margin-top: 37px;
+  margin-bottom: 0;
+  font-size: 18px;
+  line-height: 24px;
+  align-items: center;
+  color: #2c2c2c;
+}
+.footer-section {
+  margin-top: 54px;
+  display: flex;
+  height: 69px;
+  background-color: rgba(99, 105, 110, 0.48);
+}
+.footer-nav-menu {
+  width: 928px;
+  padding: 0;
+  margin: 0 0 0 40px;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.footer-nav-link {
+  font-size: 28px;
+  line-height: 28px;
+  color: #0c1927;
+  text-decoration: none;
+}
+.footer-copyright {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 24px;
+  align-items: center;
+  color: #010101;
+  margin: auto 40px auto 82px;
+}
+
+.change-theme {
+  position: absolute;
+  top: 50px;
+  right: 0;
+  font-size: 25px;
+  background-color: #35444f;
+  color: #ffffff;
+}
+
+.new-theme-span {
+  color: #84cfa3;
+}
+
+.new-theme-head {
+  background-color: #0d5016;
+}
+
+.new-theme-foot {
+  background-color: rgba(58, 131, 74, 0.48);
+}
