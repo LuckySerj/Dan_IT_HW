@@ -5,39 +5,35 @@ const headNav = document.getElementById(`headNav`);
 const changeThemeBtn = document.getElementById(`changeThemeBtn`);
 const footNav = document.getElementById(`footNav`);
 
-const newTheme = function () {
-  if (localStorage.getItem(`theme`) === `newTheme`) {
-    changeThemeBtn.classList.add(`new-theme-head`);
-    logoSpan.classList.add(`new-theme-span`);
-    headNav.classList.add(`new-theme-head`);
-    footNav.classList.add(`new-theme-foot`);
-  }
-};
-newTheme();
+const changeTheme = function () {
+  switch (localStorage.getItem(`theme`)) {
+    case `newTheme`:
+      changeThemeBtn.classList.add(`new-theme-head`);
+      logoSpan.classList.add(`new-theme-span`);
+      headNav.classList.add(`new-theme-head`);
+      footNav.classList.add(`new-theme-foot`);
+      break;
 
-const defaultTheme = function () {
-  if (localStorage.getItem(`theme`) === `defaultTheme`) {
-    changeThemeBtn.classList.remove(`new-theme-head`);
-    logoSpan.classList.remove(`new-theme-span`);
-    headNav.classList.remove(`new-theme-head`);
-    footNav.classList.remove(`new-theme-foot`);
+    case `defaultTheme`:
+      changeThemeBtn.classList.remove(`new-theme-head`);
+      logoSpan.classList.remove(`new-theme-span`);
+      headNav.classList.remove(`new-theme-head`);
+      footNav.classList.remove(`new-theme-foot`);
+      break;
   }
 };
-defaultTheme();
+changeTheme();
 
 changeThemeBtn.onclick = function () {
-  if (
-    localStorage.getItem(`theme`) === null ||
-    localStorage.getItem(`theme`) === `defaultTheme`
-  ) {
-    localStorage.setItem(`theme`, `newTheme`);
-    newTheme();
-    return;
-  }
+  switch (localStorage.getItem(`theme`)) {
+    case null || `defaultTheme`:
+      localStorage.setItem(`theme`, `newTheme`);
+      changeTheme();
+      break;
 
-  if (localStorage.getItem(`theme`) === `newTheme`) {
-    localStorage.setItem(`theme`, `defaultTheme`);
-    defaultTheme();
-    return;
+    case `newTheme`:
+      localStorage.setItem(`theme`, `defaultTheme`);
+      changeTheme();
+      break;
   }
 };
