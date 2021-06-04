@@ -17,23 +17,28 @@ resumeBtn.style.marginTop = `50px`;
 resumeBtn.style.marginLeft = `50px`;
 pauseBtn.after(resumeBtn);
 
-let timerId = setInterval(function slider() {
-  slide.forEach((el) => {
-    el.classList.add(`hide`);
-    el.classList.remove(`active`);
-  });
-  slide[current + 1].classList.add(`active`);
+let timerId = setInterval(
+  (slider = function () {
+    slide.forEach((el) => {
+      if (el.classList.contains(`active`)) {
+        el.classList.remove(`active`);
+      }
+    });
+    slide[current + 1].classList.add(`active`);
 
-  if (current + 2 === slide.length) {
-    current = -1;
-  } else {
-    current++;
-  }
-  pauseBtn.onclick = function () {
-    clearInterval(timerId);
-  };
-  resumeBtn.onclick = function () {
-    clearInterval(timerId);
-    timerId = setInterval(slider, 3000);
-  };
-}, 3000);
+    if (current + 2 === slide.length) {
+      current = -1;
+    } else {
+      current++;
+    }
+  }),
+  3000
+);
+
+pauseBtn.onclick = function () {
+  clearInterval(timerId);
+};
+resumeBtn.onclick = function () {
+  clearInterval(timerId);
+  timerId = setInterval(slider, 3000);
+};
