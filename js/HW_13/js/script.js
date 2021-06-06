@@ -26,7 +26,11 @@ changeTheme();
 
 changeThemeBtn.onclick = function () {
   switch (localStorage.getItem(`theme`)) {
-    case null || `defaultTheme`:
+    case `defaultTheme`:
+      localStorage.setItem(`theme`, `newTheme`);
+      changeTheme();
+      break;
+    case null:
       localStorage.setItem(`theme`, `newTheme`);
       changeTheme();
       break;
