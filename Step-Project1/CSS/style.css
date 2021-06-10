@@ -1,4 +1,3 @@
-/* COMMON STYLES*/
 @font-face {
   font-family: "Montserrat-Light";
   src: url(../fonts/Montserrat-Light.woff2);
@@ -20,7 +19,7 @@
 .wrapper {
   min-width: 1200px;
 }
-/* HEADER STYLES */
+
 .ham-head {
   background-image: url(../img/section_header.jpg);
   background-size: cover;
@@ -209,6 +208,7 @@
 .services {
   font-family: Montserrat-Regular, sans-serif;
   font-weight: normal;
+  min-height: 550px;
 }
 .section-header {
   font-family: Montserrat-Regular, sans-serif;
@@ -249,7 +249,7 @@
   grid-template-columns: repeat(6, 1fr);
   background-color: #f8fcfe;
 }
-.services-nav-link {
+.services-nav-item {
   display: block;
   padding-top: 16px;
   padding-bottom: 16px;
@@ -260,11 +260,32 @@
   font-size: 16px;
   line-height: 39px;
 }
-.services-nav-link:hover {
+.services-nav-item:hover {
   border: 1px solid #18cfab;
+}
+.services-nav-item.active-services {
+  position: relative;
+  background-color: #18cfab;
+  color: #ffffff;
+}
+.services-nav-item.active-services::after {
+  content: "";
+  position: absolute;
+  height: 0;
+  width: 0;
+  bottom: -20px;
+  left: 86px;
+  border: 10px solid transparent;
+  border-top: 10px solid #18cfab;
 }
 .services-content {
   margin-top: 18px;
+}
+.services-content-tabs {
+  display: none;
+}
+.services-content-tabs.active-services {
+  display: block;
 }
 .services-img {
   float: left;
@@ -330,7 +351,7 @@
   justify-content: center;
   background-color: rgba(0, 0, 0, 0.0001);
 }
-.amazing-filter {
+.amazing-nav-item {
   box-sizing: border-box;
   border: 1px solid #dadada;
   font-family: Montserrat-Regular, sans-serif;
@@ -338,10 +359,22 @@
   font-size: 14px;
   color: #717171;
   padding: 14px 15px;
+  cursor: pointer;
 }
-
+.amazing-nav-item:hover {
+  border: 1px solid #18cfab;
+}
+.amazing-nav-item.active-amazing {
+  border: 1px solid #18cfab;
+}
 .amazing-gallery-item {
   position: relative;
+}
+.amazing-gallery-item.amazing-hidden {
+  display: none;
+}
+.amazing-gallery-item.amazing-filter {
+  display: none;
 }
 .amazing-gallery {
   margin-top: 71px;
@@ -384,11 +417,19 @@
   height: 100%;
   border-top: 2px solid #18cfab;
 }
+.load-more-wrapper {
+  text-align: center;
+  margin-top: 70px;
+}
+.loading {
+  display: none;
+}
 .load-more {
   border: none;
   display: flex;
   padding: 10px 23px;
-  margin: 70px auto auto;
+  margin-left: auto;
+  margin-right: auto;
   background-color: #18cfab;
   align-items: center;
   border-radius: 4px;
@@ -467,7 +508,16 @@
   background-size: cover;
   background-position: center;
   padding-bottom: 105px;
+  text-align: center;
 }
+
+.slick-list {
+  overflow: hidden;
+}
+.slick-track {
+  display: flex;
+}
+
 .review-title {
   font-size: 36px;
   line-height: 40px;
@@ -512,6 +562,78 @@
   line-height: 27px;
   color: #bbbbbb;
   vertical-align: middle;
+}
+.review-image {
+  margin-top: 50px;
+  margin-bottom: 70px;
+  height: 145px;
+  width: 145px;
+  box-sizing: border-box;
+  border: 2px solid #18cfab;
+  border-radius: 50%;
+  box-shadow: 0 0 0 10px #18cfab50;
+}
+
+.slider-wrapper {
+  width: 500;
+  margin-left: auto;
+  margin-right: auto;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+.slick2-wrapper {
+  width: 500px;
+  height: 120px;
+  padding-top: 20px;
+  justify-content: center;
+  align-items: center;
+}
+.slick-slide img:focus {
+  outline: 0;
+}
+
+.mini-slides {
+  height: 75px;
+  border-radius: 50%;
+  margin-top: 10px;
+  float: left;
+  margin-left: 65px;
+  cursor: pointer;
+}
+
+.mini-slides-img {
+  float: left;
+  margin-top: 4px;
+  margin-left: 7px;
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+  box-shadow: 0 0 0px 4px #18cfab50;
+  outline: none;
+}
+.mini-slides-img:active {
+  outline: none;
+}
+.mini-slides-img:focus {
+  outline: none;
+}
+
+.slick-active .mini-slides-img {
+  margin-top: -5px;
+  border: 2px solid #18cfab;
+}
+
+.carousel-arrow {
+  width: 30px;
+  height: 30px;
+  border: 1px solid #ffffff;
+  color: #ffffff;
+  font-size: 18px;
+  line-height: 30px;
+}
+.carousel-arrow:hover {
+  background-color: #18cfab;
 }
 .ham-footer {
   padding-top: 48px;
