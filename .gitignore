@@ -5,6 +5,7 @@ logs
 *.log
 .ds_store
 thumbs.db
+package-lock.json
 # Ignore IDE specific files
 .idea/
 .vscode/
