@@ -645,12 +645,12 @@
 }
 
 .carousel-arrow {
-  width: 30px;
-  height: 30px;
+  padding: 8px 10px;
+  margin: 0 30px;
   border: 1px solid #ffffff;
   color: #ffffff;
-  font-size: 18px;
-  line-height: 30px;
+  font-size: 15px;
+  cursor: pointer;
 }
 .carousel-arrow:hover {
   background-color: #18cfab;
