@@ -31,6 +31,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-row-gap: 32px;
+  grid-column-gap: 50px;
 
   @media (max-width: 905px) {
     grid-template-columns: 1fr;
@@ -44,12 +45,17 @@
 
 .post {
   @media (max-width: 905px) {
-    margin-right: 260px;
+    margin-right: 28vw;
   }
 
   @media (max-width: 664px) {
-    margin-right: 86px;
+    margin-right: 12vw;
 
+    &--disabled {
+      display: none;
+    }
+  }
+  @media (max-width: 526px) {
     &--disabled {
       display: none;
     }
@@ -60,7 +66,7 @@
   float: left;
   margin-right: 21px;
 
-  @media (max-width: 664px) {
+  @media (max-width: 526px) {
     float: none;
   }
 }
@@ -94,7 +100,7 @@
   color: #5c5c5c;
   margin-top: 13px;
 
-  @media (max-width: 664px) {
+  @media (max-width: 526px) {
     display: none;
   }
 }
