@@ -40,7 +40,7 @@ function jsBuild() {
 }
 
 function cleanBuild() {
-  return src(path.clean, { read: false }).pipe(clean());
+  return src(path.clean, { read: false, allowEmpty: true }).pipe(clean());
 }
 
 function watcher() {
