@@ -43,18 +43,18 @@ function validateBook(book) {
 }
 
 let list = function (item, root) {
-  let ul = document.createElement("ul");
-  let elem = document.createElement("li");
+  const ul = document.createElement("ul");
+  const elem = document.createElement("li");
+  elem.innerText = `${item.slice(1, -1)}`;
   ul.append(elem);
   root.append(ul);
-  elem.innerText = `${item.slice(1, -1)}`;
 };
 
 books.forEach((e) => {
   try {
     validateBook(e);
-    let string = JSON.stringify(e);
-    let newSrting = string
+    const string = JSON.stringify(e);
+    const newSrting = string
       .replace('"author":', "Автор: ")
       .replace('"name":', "\nНазвание книги: ")
       .replace('"price":', "\nЦена: ");
