@@ -1,0 +1,19 @@
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+.ipCheck {
+  margin-top: 150px;
+  align-self: center;
+  width: max-content;
+}
+
+#root {
+  align-self: center;
+  color: red;
+}
+
+.adress {
+  list-style: none;
+}
